@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <main>
+        <!-- Signup Selection -->
+        <section id="signupSelection" class="signup-selection">
+            <h2>Sign Up</h2>
+            <div class="signup-options">
+                <button class="cta-button" onclick="showUserSignup()">Patient Signup</button>
+                <button class="cta-button" onclick="showDoctorSignup()">Doctor Resigration</button>
+            </div>
+        </section>
+    
+        <!-- User Signup Form -->
+        <section id="userSignup" class="signup-form" style="display: none;">
+            <h3>Patient Signup</h3>
+            <form id="userSignupForm">
+                <label for="user-name">Full Name</label>
+                <input type="text" id="user-name" name="user-name" required>
+    
+                <label for="user-email">Email</label>
+                <input type="email" id="user-email" name="user-email" required>
+    
+                <label for="user-password">Password</label>
+                <input type="password" id="user-password" name="user-password" required>
+    
+                <label for="user-contact">Contact Number</label>
+                <input type="text" id="user-contact" name="user-contact" required>
+    
+                <label for="user-age">Age</label>
+                <input type="number" id="user-age" name="user-age" required>
+    
+                <button type="submit" class="cta-button">Register</button>
+            </form>
+        </section>
+    
+        <!-- Doctor Registration Form -->
+        <section id="doctorsignup" class="signup-form" style="display: none;">
+            <h3>Doctor Signup</h3>
+            <form id="doctorsignupForm">
+                <label for="doctor-name">Full Name</label>
+                <input type="text" id="doctor-name" name="doctor-name" required>
+    
+                <label for="doctor-email">Email</label>
+                <input type="email" id="doctor-email" name="doctor-email" required>
+    
+                <label for="doctor-password">Password</label>
+                <input type="password" id="doctor-password" name="doctor-password" required>
+    
+                <label for="doctor-specialty">Specialty</label>
+                <input type="text" id="doctor-specialty" name="doctor-specialty" required>
+    
+                <label for="doctor-id-proof">Upload ID Proof</label>
+                <input type="file" id="doctor-id-proof" name="doctor-id-proof" accept=".jpg,.jpeg,.png,.pdf" required>
+    
+                <button type="submit" class="cta-button">Register</button>
+            </form>
+        </section>
+    </main>
+    <script src="signup.js"></script>
+</body>
+</html>
+
+ <!-- Patient Booking Form -->
+ <section id="bookingForm" class="booking-form">
+    <h2>Book a Doctor Appointment</h2>
+    <form id="patientDetailsForm">
+        <label for="patient-name">Patient Name</label>
+        <input type="text" id="patient-name" name="patient-name" required>
+
+        <label for="Gender">select gender:</label>
+
+<select id="gender select">
+<option value="">--Please choose an option--</option>
+<option value="male">male</option>
+<option value="female">female</option>
+<option value="other">other</option>
+</select>
+
+        <label for="age">Patient Age</label>
+        <input type="number" id="patient-age" name="patient-age" required>
+
+        <label for="patient-contact">Contact Number</label>
+        <input type="text" id="patient-contact" name="patient-contact" required>
+
+        <label for="patient-symptoms">Symptoms</label>
+        <textarea id="patient-symptoms" name="patient-symptoms" rows="3" required></textarea>
+
+        <button type="button" class="cta-button" onclick="checkDoctorAvailability()">Check Doctor Availability</button>
+    </form>
+</section>
+
+<!-- Doctor List Section -->
+<section id="doctorList" class="doctor-list" style="display: none;">
+    <h3>Available Doctors</h3>
+    <div id="doctorContainer">
+        <!-- JavaScript will dynamically insert doctors here -->
+    </div>
+</section>
+
+<!-- Doctor Availability Modal -->
+<div id="availabilityModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeAvailabilityModal()">&times;</span>
+        <h3>Choose a Date & Time</h3>
+        <div id="availabilityContainer">
+            <!-- JavaScript will dynamically insert dates and times here -->
+        </div>
+        <button class="cta-button" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+</div>
+
+<!-- Booking Confirmation -->
+<div id="confirmationMessage" class="confirmation-message" style="display: none;">
+    <h3>Your Booking is Confirmed!</h3>
+    <p>Thank you! Your appointment has been scheduled successfully.</p>
+</div>

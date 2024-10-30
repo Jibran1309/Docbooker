@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBooker - Secure Medical Record Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">DocBooker</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-button">Get Started</button>
+        </nav>
+        <div class="hero-section">
+            <img src="images/hero-image.jpg" alt="DocBooker" class="hero-image">
+            <div class="hero-text">
+                <h1>Store and Manage Medical Records Securely</h1>
+                <p>DocBooker keeps all patient records safe, accessible, and organized at your fingertips.</p>
+               <a href="signup.html" <button class="cta-button">Sign Up Now</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+       <!-- Login Selection Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeLoginModal()">&times;</span>
+        <h2>Login as</h2>
+        <button class="cta-button" onclick="openUserRegister()">User Login</button>
+        <button class="cta-button" onclick="openDoctorLogin()">Doctor Login</button>
+    </div>
+</div>
+
+<!-- User Registration Form -->
+<div id="userRegisterModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeUserRegister()">&times;</span>
+        <h2>User Registration</h2>
+        <form id="userRegisterForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="contact">Contact Number</label>
+            <input type="text" id="contact" name="contact" required>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+            <button type="submit" class="cta-button">Register</button>
+        </form>
+    </div>
+</div>
+
+<!-- Doctor Login Form -->
+<div id="doctorLoginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeDoctorLogin()">&times;</span>
+        <h2>Doctor Login</h2>
+        <form id="doctorLoginForm">
+            <label for="doctor-username">Username</label>
+            <input type="text" id="doctor-username" name="doctor-username" required>
+            <label for="doctor-password">Password</label>
+            <input type="password" id="doctor-password" name="doctor-password" required>
+            <button type="submit" class="cta-button">Login</button>
+        </form>
+    </div>
+</div>
+   
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="images/feature1.jpeg" alt="Easy Management" class="feature-icon">
+                    <h3>Easy Record Management</h3>
+                    <p>Store, edit, and access patient records with a user-friendly interface.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature2.jpeg" alt="Secure & Private" class="feature-icon">
+                    <h3>Secure & Private</h3>
+                    <p>Data encryption ensures patient data is safe and confidential.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature3.png" alt="24/7 Access" class="feature-icon">
+                    <h3>24/7 Access</h3>
+                    <p>Access patient records anytime, anywhere, across devices.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <h2>About DocBooker</h2>
+            <p>DocBooker is a secure and innovative solution for medical professionals to manage and store patient records seamlessly, providing an efficient, private, and organized digital experience.</p>
+        </section>
+    </main>
+    <footer id="contact" class="footer">
+        <p>Contact us: support@docbooker.com | © 2023 DocBooker</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
